@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+%Gummi|065|=)
+\title{\textbf{EV2.2.Arreglos y Parametros de los Amplificadores de clase B}}
+\author{Cervantes Martinez Luis Osvaldo\\
+		Sistemas Electronicos de Interfaz\\
+		Martes, 8 de Octubre 2019}
+
+\date{}
+\usepackage{graphicx}
+\begin{document}
+
+\maketitle
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.45]{/home/osvaldo/Escritorio/EV2.3/UPZMG.png}
+\caption{UPZMG}
+\label{}
+\end{figure}
+
+\pagebreak
+\section{ Amplificadores}
+Un amplificador recibe una señal de algun transductor de capacitacion o de cualquier otra fuente de entrada y proporciona una version mas grande de la señal a cierto dispositivo de salida o a otra etapa de amplificacion.
+
+Un amplificador de voltaje amplificacion de voltaje principalmente para incrementar voltaje de la señal de entrada, Por otro lado, los amplificadores de gran señal o de potencia, proporcionan principalmente potencia suficiente a una carga de salida para activar una bocina o algun otro dispositivo.
+
+Es decir un amplificador de potencia es aquel que, aparte de suministrar una mayor tension, suministran tambien una mayor corriente (amplificacion de tension y amplificacion de corriente y, por ende, amplificacion de potencia).
+
+\section{ Amplificadores de clase B}
+ Los amplificadores de clase B se caracterizan por tener intensidad casi nula a traves de sus transistores cuando no hay coneccion en la entrada del circuito, por lo que en reposo el consumo es casi nulo. 
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.50]{/home/osvaldo/Escritorio/EV2.3/Amplificador clase B.png}
+\caption{Amplificador Clase B}
+\label{}
+\end{figure}
+
+\subsection{Ventajas y Desventajas}
+\textbf{Ventajas:}\\
+    Posee bajo consumo en reposo.\\
+    Aprovecha al maximo la Corriente entregada por la fuente.\\
+    Intensidad casi nula cuando esta en reposo.\\
+\textbf{Desventajas:}\\
+Producen armonicos, y es mayor cuando no tienen los transistores de salida con las mismas caracteristicas tecnicas, debido a esto se les suele polarizar de forma que se les introduce una pequeña polarizacion directa. Con esto se consigue desplazar las curvas y se disminuye dicha distorsion.
+
+\subsection{Caracteristicas}
+Se les denomina amplificador clase B, cuando el voltaje de polarizacioón y la maxima amplitud de la señal entrante poseen valores que hacen que la corriente de salida circule durante el semiciclo de la señal de entrada.
+
+La caracteristica principal de este tipo de amplificadores es el alto factor de amplificacion.
+
+Amplificadores clase AB: Estos basicamente son la mezcla de los dos anteriores. Cuando el voltaje de polarizacion y la maxima amplitud de la señal entrante poseen valores que hacen que la corriente de salida circule durante menos del ciclo completo y mas de la mitad del ciclo de la señal de entrada, se les denomina: Amplificadores de potencia clase AB.
+
+Dado que ocupa un lugar intermedio entre los de clase A y AB, cuando el voltaje de la señal es moderado funciona como uno de clase A, cuando la señal es fuerte se desempeña como uno de clase B, con una eficiencia y deformacion moderadas. 
+
+
+\end{document}
