@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+%Gummi|065|=)
+\title{\textbf{EV2.4.Giro de un motor de corriente directa}}
+\author{Cervantes Mart\'inez Luis Osvaldo\\
+		Sistemas Electronicos de Interfaz\\
+		Martes, 15 de Octubre 2019}
+
+\date{}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\begin{document}
+
+\maketitle
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.45]{/home/osvaldo/Escritorio/EV2.4/UPZMG.png}
+\caption{UPZMG}
+\label{}
+\end{figure}
+
+\pagebreak
+\section{Motor de Corriente Directa}
+Los motores de Corriente Directa o motor DC  es tambi\'en conocidos como motor de Corriente Continua o motor CC, son  muy utilizados en dise\~nos de ingenier\'ia debido a las caracter\'isticas torque-velocidad que poseen con diferentes configuraciones el\'ectricas o mec\'anicas.
+
+Los motores de CD, responden r\'apidamente gracias a que cuentan con una gran raz\'on de torque a la inercia del rotor. Otra ventaja es la implementaci\'on del frenado din\'amico, donde la energ\'ia generada por el motor se alimenta a un resistor disipador, y el frenado regenerativo donde la energ\'ia generada por el motor retroalimenta al suministro de potencia CD, esto es muy utilizado en aplicaciones donde se deseen frenados r\'apidos y de gran eficiencia.
+
+\section{Clasificaci\'on de los Motores de CD}
+Los motores de corriente directa se pueden clasificar de acuerdo con la forma en que crean los campos magn\'eticos del estator.
+\begin{itemize}
+\item Im\'an permanente            
+\item Devanado shunt
+\item Devanado serie
+\item Devanado compuesto
+
+\end{itemize}
+
+\subsection{Motores de Im\'an Permanente (PM)}
+
+En este tipo de motores, los campos del estator son generados mediante imanes permanentes que no requieren fuente de alimentaci\'on externa y por lo tanto no producen un calentamiento. Los motores PM son m\'as ligeros y peque\~nos en comparaci\'on con otros motores de CD con algunas caracter\'isticas equivalentes ya que la intensidad del campo del im\'an permanente es alta. Tambi\'en resulta sencillo invertir el sentido de giro al conmutar la direcci\'on del voltaje aplicado, ya que la corriente y el campo cambian de direcci\'on s\'olo en el rotor.
+
+El motor de im\'an permanente es ideal en aplicaciones de control por computadora debido a su linealidad torque-velocidad, aunque \'unicamente se utilizan en aplicaciones de baja potencia pues su potencia nominal usualmente se limita a 5 hp (3278 W) o menos.
+
+Los motores CD de im\'an permanente pueden ser motores con escobillas, sin escobillas o de pasos.
+
+\subsection{Motor Shunt}
+
+Conformados por una armadura y devanados de campo conectados en paralelo que son activados mediante la misma fuente. Los motores shunt presentan velocidad casi constante sobre un gran rango de carga, cuentan con un torque de arranque de aproximadamente 1.5 veces el torque operativo nominal, tienen torque de arranque m\'as bajo que cualquiera de los motores de CD y se puede convertir econ\'omicamente para permitir una velocidad ajustable al colocar un potenci\'ometro en serie con los devanados de campo. La corriente de carga total es la suma de las corrientes de armadura y campo.
+
+\subsection{Motor Serie}
+
+Cuentan con devanados de armadura y campo conectados en serie, de modo que las corrientes de armadura y campo son iguales. Los motores en serie generan torques de arranque muy altos, velocidad extremadamente variable dependiendo de la carga, y gran velocidad cuando la carga es peque\~na.
+
+Los motores en serie grandes pueden fallar catastr\'oficamente cuando se descargan s\'ubitamente debido a la fuerza din\'amica a altas velocidades, a esto se le llama sin control.  
+
+La curva torque-velocidad para un motor en serie tiene forma hiperb\'olica, lo que implica una relaci\~'on inversa entre el torque y la velocidad, con una potencia casi constante.
+
+\subsection{Motor Compuesto}
+
+Estor motores incluyen tanto devanados de campo en derivaci\'on como en serie, lo que resulta en caracter\'isticas combinadas de motores en derivaci\'on y en serie.
+
+Parte de la corriente de carga pasa a trav\'es de los devanados de armadura y serie, la corriente de carga restante pasa s\'olo a trav\'es de los devanados en derivaci\'on. La velocidad m\'axima de un motor compuesto es limitada, su regulaci\'on de velocidad no es tan buena como la de un motor en derivaci\'on. El torque producido por los motores compuestos es un poco menor que el de los motores en serie de similar tama\~no.
+
+\pagebreak
+\begin{thebibliography}{0}
+\textcolor{blue}{\url{https://www.mecatronicalatam.com/motores/motores-de-cd}}
+ \end{thebibliography}
+
+\end{document}
