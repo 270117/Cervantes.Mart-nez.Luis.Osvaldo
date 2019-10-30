@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+%Gummi|065|=)
+\title{\textbf{EV2.8. Calcular los par\'ametros de circuitos de activaci\'on de transistores de potencia.}}
+\author{Cervantes Mart\'inez Luis Osvaldo\\
+		Sistemas Electronicos de Interfaz\\
+		Martes, 29 de Octubre 2019}
+
+\date{}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\begin{document}
+
+\maketitle
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.40]{/home/osvaldo/Escritorio/EV.2.8/UPZMG.png}
+\caption{UPZMG}
+\label{}
+\end{figure}
+\~
+\pagebreak
+\section{El transistor de potencia}
+
+El transistor de potencia
+
+El funcionamiento y utilización de los transistores de potencia es idéntico al de los transistores normales, teniendo como características especiales las altas tensiones e intensidades que tienen que soportar y, por tanto, las altas potencias a disipar.
+
+Existen tres tipos de transistores de potencia: 
+\begin{itemize}
+\item Bipolar.           
+\item Unipolar o fet(Transistor de Efecto de Campo).
+\item IGBT.
+\end{itemize}
+
+\section{Principios b\'asicos de funcionamiento}
+La diferencia entre un transistor bipolar y un transistor unipolar o FET es el modo de actuaci\'on sobre el terminal de control. En el transistor bipolar hay que inyectar una corriente de base para regular la corriente de colector, mientras que en el FET el control se hace mediante la aplicaci\'on de una tensi\'on entre puerta y fuente. Esta diferencia vienen determinada por la estructura interna de ambos dispositivos, que son substancialmente distintas.
+
+Es una caracter\'istica com\'un, sin embargo, el hecho de que la potencia que consume el terminal de control (base o puerta) es siempre m\'as peque\~na que la potencia manejada en los otros dos terminales.
+
+En resumen, destacamos tres cosas fundamentales: 
+\begin{itemize}
+\item En un transistor bipolar $I_B$ controla la magnitud de $I_C$.           
+\item Enun FET, la tensi\'on $V_GS$ controla la corriente $I_D$ 
+\item En ambos casos, con una potencia peque\~na puede controlarse otra bastante mayor.
+\end{itemize}
+
+\pagebreak
+\section{C\'alculo de potencias disipadas en conmutaci\'on con carga resistiva}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.50]{/home/osvaldo/Escritorio/EV.2.8/Señales.png}
+\caption{TON Y TOFF}
+\label{}
+\end{figure}
+
+La gr\'afica superior muestra las se\~nales idealizadas de los tiempos de conmutaci\'on (ton y toff) para el caso de una carga resistiva.
+
+Supongamos el momento origen en el comienzo del tiempo de subida (tr) de la corriente de colector. En estas condiciones (0 t tr) tendremos : 
+\begin{equation}
+I_C=(I_Cmax)(\frac{t}{t_r})
+\label{1}
+\end{equation}\\
+Donde $I_Cmax$ vale:
+\begin{equation}
+ I_Cmax=\frac{V_CC}{R}
+\label{2}
+ \end{equation}
+Tambien tenemos que la tensi\'on colector-emisor viene dada como:
+
+\begin{equation}
+ V_CB=V_CC-R*i_c
+\label{3}
+ \end{equation}
+
+Sustituyendo, tendremos que:
+
+\begin{equation}
+ V_CB=V_CC-R*\frac{V_CC}{R}*\frac{t}{t_r}=V_CC*(1-\frac{t}{t_r})
+\label{4}
+ \end{equation}
+ 
+ Nosotros asumiremos que la $V_C$$_E$ en saturaci\'on es despreciable en comparaci\'on con Vcc.
+
+As\'i, la potencia instant\'anea por el transistor durante este intervalo viene dada por:
+
+ \begin{equation}
+ p=V_CB*i_c=V_CC*I_Cmax*\frac{t}{t_r}*(1-\frac{t}{t_r})
+\label{5}
+ \end{equation}
+
+La energ\'ia, Wr, disipada en el transistor durante el tiempo de subida est\'a dada por la integral de la potencia durante el intervalo del tiempo de ca\'ida, con el resultado:
+
+ \begin{equation}
+ W_r=\frac{(V_CC*I_CMmax)}{4})*\frac{(2*t_f)}{3}
+\label{6}
+ \end{equation}
+
+
+De forma similar, la energ\'ia ($W_f$) disipada en el transistor durante el tiempo de ca\'ida, viene dado como: 
+
+ \begin{equation}
+ W_f=\frac{(V_CC*I_CMmax)}{4})*\frac{(2*t_f)}{3}
+\label{7}
+ \end{equation}
+
+La potencia media resultante depender\'a de la frecuencia con que se efect\'ue la conmutaci\'on:
+
+\begin{equation}
+ P_AV=f*(W_r+W_f)
+\label{7}
+ \end{equation}
+ 
+ Un \'ultimo paso es considerar tr despreciable frente a tf, con lo que no cometer\'iamos un error apreciable si finalmente dejamos la potencia media, tras sustituir, como:
+
+\begin{equation}
+ P_CAV=\frac{(V_CC*I_Cmax)}{6}*t_f*f
+\label{7}
+ \end{equation}
+ 
+\pagebreak
+\begin{thebibliography}{0}
+\textcolor{blue}{\url{https://www.uv.es/marinjl/electro/transistores.html}}\\
+
+
+
+ \end{thebibliography}
+
+\end{document}
+
